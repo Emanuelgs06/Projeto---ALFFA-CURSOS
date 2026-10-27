@@ -100,12 +100,19 @@
   aspect-ratio: 1 / 1;  /* quadrada */
   height: auto;
   object-fit: cover;    /* preenche o quadrado sem esticar */
+  object-position: 80% center; /* a foto é horizontal: mostra mais o lado direito, onde está a pessoa */
 }
+
+/* enquadramento das outras fotos (0% = esquerda, 100% = direita) */
+.it__badge img { object-position: 40% center; }
+.tutoring__badge img { object-position: 40% center; }
 
 .hero__badge,
 .it__badge,
 .tutoring__badge,
 .english__badge { max-width: 440px; width: 100%; }
+
+.hero__badge { max-width: 560px; } /* hero maior no celular (precisa vir depois da regra acima) */
 
 
 .tutoring__badge img { box-shadow: 12px 12px 0 var(--color-primary); }
@@ -215,7 +222,5 @@
   border-radius: 50%;
   background: var(--color-whatsapp);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-  transition: filter 0.2s ease, transform 0.2s ease;
 }
- 
 .whatsapp-float__icon { width: 30px; height: 30px; fill: var(--color-white); }
